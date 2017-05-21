@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore;
 using Microsoft.AspNetCore.Diagnostics.Identity.Service;
@@ -12,6 +11,11 @@ using Microsoft.AspNetCore.Rewrite;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Platform.Context;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Platform.Data;
+using Platform.Data.Account;
 
 namespace Platform
 {
@@ -27,8 +31,6 @@ namespace Platform
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddIdentityServiceAuthentication();
-
             services.AddMvc();
         }
 
@@ -58,6 +60,8 @@ namespace Platform
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+           // DbInitializer.Initialize(context);
         }
     }
 }
