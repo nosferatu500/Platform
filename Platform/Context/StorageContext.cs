@@ -1,9 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Platform.Data.Account;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Platform.Data.Course;
+using Platform.Data.Course.Lesson;
 
 namespace Platform.Context
 {
@@ -11,6 +9,8 @@ namespace Platform.Context
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Lesson> Lessons { get; set; }
 
         public StorageContext() { }
 
@@ -26,6 +26,8 @@ namespace Platform.Context
         {
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Teacher>().ToTable("Teacher");
+            modelBuilder.Entity<Course>().ToTable("Course");
+            modelBuilder.Entity<Lesson>().ToTable("Lesson");
         }
 
     }
