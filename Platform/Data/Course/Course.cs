@@ -1,4 +1,4 @@
-﻿using CoreEclipse.Account;
+﻿using CoreEclipse.Data;
 
 namespace Platform.Data.Course
 {

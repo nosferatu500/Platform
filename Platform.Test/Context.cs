@@ -19,5 +19,12 @@ namespace Platform.Test
 
             context.SaveChanges();
         }
+
+        [TestMethod]
+        public void DropContext()
+        {
+            context.Database.EnsureDeleted();
+            context.Database.EnsureCreated();
+        }
     }
 }

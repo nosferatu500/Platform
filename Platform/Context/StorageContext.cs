@@ -22,6 +22,7 @@ namespace Platform.Context
         {
             var connection = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Platform;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             optionsBuilder.UseSqlServer(connection);
+            optionsBuilder.UseLazyLoading();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

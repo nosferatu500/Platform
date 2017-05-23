@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CoreEclipse.Account;
+﻿using CoreEclipse.Data;
 
 namespace Platform.Data.Course.Lesson
 {

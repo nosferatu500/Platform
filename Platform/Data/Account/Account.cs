@@ -3,8 +3,8 @@ using Platform.Data.Account.Protection;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
-using CoreEclipse.Account;
 using CoreEclipse.Account.Protection;
+using CoreEclipse.Data;
 
 namespace Platform.Data.Account
 {
